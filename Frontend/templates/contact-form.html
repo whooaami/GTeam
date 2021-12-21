@@ -1,0 +1,38 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./static/css/contacts.css" th:href="@{./static/css/contacts.css}" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div id = "logo" onclick = "slowScroll('#top')">
+            <a th:href="@{/}" style="text-decoration: none" class="logo_title"><span>WeatherMet</span></a>
+        </div>
+        <div id = "about">
+            <a th:href="@{/}" title="Home">Home</a>
+        </div>
+    </header>
+
+    <div id = "contacts">
+        <div style="text-align: center;"><h5>Зворотній зв'язок</h5></div>
+        <form id = "form_input" th:action="@{/contact}" method="post">
+            <label for="fullName">Ім'я <span>*</span></label><br>
+            <input type="text" placeholder="Введіть ім'я" name="fullName" id="fullName"><br>
+            <label for="email">Ваша пошта <span>*</span></label><br>
+            <input type="email" placeholder="Введіть email" name="email" id="email"><br>
+            <label for="message">Повідомлення <span>*</span></label><br>
+            <textarea placeholder="Введіть ваше повідомлення" name="message" id="message"></textarea><br>
+
+            <button id="mess_send" class="btn" type="submit">Send</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

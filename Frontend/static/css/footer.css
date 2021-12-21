@@ -1,0 +1,81 @@
+/* Футер сайту */
+
+footer {
+    width: 100%;
+    padding: 10px;
+    background-image: url(https://toors.co/wp-content/uploads/2019/02/paragliding-in-georgia-in-gudauri.jpg);
+    background-blend-mode: multiply;
+    background-color: #2e3a44;
+    background-size: cover;
+    float: left;
+}
+
+footer #footer_logo {
+    color: #fff;
+    cursor: pointer;
+}
+
+footer #footer_logo span {
+    font-size: 1.7em;
+    line-height: 45px;
+    margin-left: 40px;
+    font-family: 'Suez One', serif;
+}
+
+@media (min-width: 701px) {
+    #footer_logo {
+        float: left;
+        width: 30%;
+        font-size: 1.1em;
+    }
+
+    #footer_about {
+        float: right;
+        width: 67%;
+    }
+}
+
+@media (max-width: 700px) {
+    #footer_logo {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    #footer_about {
+        float: left;
+        width: 100%;
+    }
+}
+
+#footer_about {
+    text-align: center;
+    font-size: 1em;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+#footer_about > a {color: #fff}
+
+#footer_about > a:hover {
+    color: #b0b0b0;
+    text-decoration: underline;
+}
+
+#footer_about > a:not(:last-child) {
+    margin-right: 7%;
+}
+
+.fixed {
+    z-index: 5000;
+    background-color: #fff;
+    border-bottom: 1px solid silver;
+}
+
+footer.fixed #footer_logo {
+    color: #343434;
+}
+
+
+.fixed #footer_logo a {color: #343434}
+.fixed #footer_logo a:hover {color: #7c7c7c}

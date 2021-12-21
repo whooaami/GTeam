@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherMet</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <link href="./static/css/header_dashboard.css" th:href="@{./static/css/header_dashboard.css}" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+    <div id = "logo" onclick = "slowScroll('#top')">
+        <a th:href="@{/}" style="text-decoration: none" class="logo_title"><span>WeatherMet</span></a>
+    </div>
+    <div id = "about">
+        <a th:href="@{/contact}" title="Контакти">Contacts</a>
+    </div>
+</header>
+
+<div class = "container mt-3">
+
+    <div class="text">
+        <h1>Weather</h1>
+    </div>
+
+    <table class = "table table-dark text-white">
+
+        <thead>
+        <th>№</th>
+        <th>Humidity</th>
+        <th>Pressure</th>
+        <th>Solorld</th>
+        <th>Temperature</th>
+        <th>WindDirection</th>
+        <th>WindSpeed</th>
+        </thead>
+        <tbody id = "tbody1">
+
+        </tbody>
+
+    </table>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+<script type="module" th:src="@{./static/js/firebase.js}"></script>
+</body>
+</html>

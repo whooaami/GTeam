@@ -1,0 +1,177 @@
+/*global*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Suez+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    background-image: url(https://toors.co/wp-content/uploads/2019/02/paragliding-in-georgia-in-gudauri.jpg);
+    background-blend-mode: multiply;
+    background-color: #2e3a44;
+    background-size: cover;
+    color: #fff;
+    font-family: Trebuchet MS, Helvetica;
+}
+
+
+/* Шапка сайту */
+
+header {
+    width: 100%;
+    padding: 10px 10px;
+    margin-left: 120px;
+    background: transparent;
+    float: left;
+    position: fixed;
+}
+
+header #logo {
+    color: #fff;
+    cursor: pointer;
+}
+
+.logo_title {
+    color: white;
+}
+
+header #logo span {
+    font-size: 1.7em;
+    line-height: 45px;
+    margin-left: 40px;
+    font-family: 'Suez One', serif;
+}
+
+@media (min-width: 701px) {
+    #logo {
+        float: left;
+        width: 30%;
+        font-size: 1.1em;
+    }
+
+    #about {
+        float: right;
+        width: 67%;
+    }
+}
+
+@media (max-width: 700px) {
+    #logo {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    #about {
+        float: left;
+        width: 100%;
+    }
+}
+
+#about {
+    text-align: center;
+    font-size: 1em;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+#about > a {color: #fff}
+
+#about > a:hover {
+    color: #b0b0b0;
+    text-decoration: underline;
+}
+
+#about > a:not(:last-child) {
+    margin-right: 7%;
+}
+
+.fixed {
+    z-index: 5000;
+    background-color: #fff;
+    border-bottom: 1px solid silver;
+}
+
+header.fixed #logo {
+    color: #343434;
+}
+
+
+.fixed #about a {color: #343434}
+.fixed #about a:hover {color: #7c7c7c}
+
+
+/* Блок з контактами */
+
+#contacts {
+    width: 100%;
+    float: left;
+    padding-bottom: 40px;
+    margin-top: 200px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: lighter;
+}
+
+#contacts h5 {font-size: 3em; color: #fff}
+
+#form_input {
+    margin-top: 15px;
+    width: 35%;
+    margin-left: 38%;
+    font-size: 1.1em;
+}
+
+#form_input label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.4em;
+    font-family: 'Roboto Slab', serif;
+}
+
+#form_input label > span {
+    color: #e87e7e;
+}
+
+#form_input input, #form_input textarea {
+    margin-bottom: 10px;
+    width: 70%;
+    padding: 10px 2%;
+    border-radius: 7px;
+    border: 2px solid silver;
+    font-size: 0.9em;
+    color: #4a4a4a;
+}
+
+#form_input input:focus, #form_input textarea:focus {
+    border-color: #333;
+}
+
+.btn {
+    height: 40px;
+    width: 30%;
+    float: left;
+    border-radius: 5px;
+    padding: 5px 9px;
+    font-size: 1.2em;
+    background-color: #ec6550;
+    text-shadow: #454545 0 0 2px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+
+.btn:hover {
+    background-color: #c15443;
+}
