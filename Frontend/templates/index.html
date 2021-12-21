@@ -1,0 +1,121 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+	<meta charset="UTF-8">
+	<title>Registration and Login App</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet"
+		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		  crossorigin="anonymous">
+	<link href="./static/css/style.css" th:href="@{./static/css/style.css}" rel="stylesheet" />
+
+</head>
+<body>
+<header id="header">
+	<div id = "logo" onclick = "slowScroll('#top')">
+		<span>WeatherMet</span>
+	</div>
+	<div id = "about">
+		<a href="#" title="Можливості" onclick="slowScroll('#main')">Opportunities</a>
+		<a th:href="@{/dashboard}" title="Dashboard">Dashboard</a>
+		<a th:href="@{/contact}" title="Контакти">Contacts</a>
+		<a href="#" title="FAQ" onclick="slowScroll('#faq')">FAQ</a>
+		<a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a>
+	</div>
+</header>
+
+
+<div id = "top">
+	<h1>G Team</h1>
+	<h3>Exect weather conditions</h3>
+	<!-- поставити в якомусь рядку -->
+	<h6  class="welcome_user">Welcome <span sec:authentication="principal.username"> User</span></h6>
+</div>
+
+
+<div id = "main">
+
+	<div class = "intro">
+		<h2>Our product will help everyone!</h2>
+
+	</div>
+	<div class = "text">
+		<span>
+			We know how to make your flights safe and memorable.
+			Our task is to make your flights safe.
+			Thanks to our metrological station you will be able to fly safely at a bird's eye view.
+			Our main goal is to make a station that will send weather
+			conditions on the windguru so that our target audience can track the weather in real time.
+		</span>
+	</div>
+</div>
+
+<div id = "overview">
+	<h2>Weather station</h2>
+	<h4>everything is easier with us</h4>
+
+	<div class="flex">
+		<div class = "img_model">
+			<img src = "./static/images/model2.jpeg" alt = "">
+		</div>
+
+		<div class="text_model">
+			<p>You can look at our weather station.<br>A good question will be how our station differs from others.<br>
+				First of all, our station has a solar panel, which makes our station autonomous.<br>
+				We can also boast of the size of the station.<br>
+				The size is convenient for transportation or even put in your yard if necessary.<br>
+				If you have any questions, you can contact us and we will tell you more.</p>
+		</div>
+	</div>
+
+
+</div>
+
+<div id="faq">
+	<div>
+		<span class="title">Payment</span><br>
+		<span class="heading">How the payment will be made ?</span>
+		<p>
+			Choose the product or service you want to buy and feel free to go to the payment page.
+			Make sure there is a Verified by Visa logo in the Payment section. The availability of this service guarantees an increased level of security of your online payments
+		</p>
+	</div>
+	<div>
+		<span class="title">Information</span><br>
+		<span class="heading">What services do we offer?</span>
+		<p>
+			First of all, we offer quality service
+			Also, You can write to us at any time
+			Futhermore, You can  fill out a feedback form
+			You can also find us on social networks
+			What is more, You can  view weather data from our weather stations in real-time.
+		</p>
+	</div>
+	<div>
+		<span class="title">Guarantees</span><br>
+		<span class="heading">What guarantees are there ?</span>
+		<p>
+			We officially import our equipment to the territory of Ukraine, paying all relevant taxes,
+			working honestly and openly.
+			So you get a reliable product that is subject to warranty service and repair.
+			We make every effort to ensure that you enjoy using our
+		</p>
+	</div>
+</div>
+
+<footer>
+	<div id = "footer_logo" onclick = "slowScroll('#top')">
+		<span>WeatherMet</span>
+	</div>
+	<div id = "footer_about">
+		<a href="#" title="Можливості">Opportunities</a>
+		<a href="#" title="Dashboard">Dashboard</a>
+		<a href="#" title="Контакти">Contacts</a>
+		<a href="#" title="FAQ">FAQ</a>
+	</div>
+</footer>
+
+<script href="./static/js/slowScroll.js" th:src="@{./static/js/slowScroll.js}"></script>
+</body>
+
+</html>
